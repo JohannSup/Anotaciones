@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos</title>
+
+    
+
+    <!-- reglas de estilo esto afecta a todo el documento -->
+    <style>
+        
+        h1{
+            font-family: 'Times New Roman';
+            color: red !important;
+            /* color: red !important;  SI UTILIZO ESTE UTILIZARA ESTA OPCION EN VEZ DE REALIZAR LA JERARQUIA */  
+            /* ESTA AL ULTIMO Estilito.css y por eso es verde pero si ponemos !important hara caso a h1 */
+
+        }
+    </style>
+
+<link rel="stylesheet" type="text/css" href="Estilito.css">
+
+    
+
+    <!-- la especifidad tratara del ordenamiento de los procesos a hacer en css le hace caso en modo cascada -->
+    <!-- si este esta al ultimo le hara caso a este 
+
+    <style>
+        
+        h1{
+            font-family: 'Times New Roman';
+            color: red;
+        }
+    </style> -->
+
+    <!-- e ignorara este
+    
+    <link rel="stylesheet" type="text/css" href="Estilito.css"> -->
+
+</head>
+<body>
+    <!-- si no hay link o archivo a llamar elijira el color azul pero como mencionamos Estilito.css le hace caso a este -->
+    <h1 style="font-family: Lucida Sans; color: blue;">Estilo en linea :o</h1>
+    <!-- como no se define individualmente agarra el valor default -->
+    <h1>Estilo css interno</h1>
+
+
+    <h1>Estilo Css externo</h1> 
+    <br>
+
+    <p>
+        <span>Texto span</span>
+        <a href=""> <span>Texto span mas adentro</span>  </a>
+        <br>    
+        <!-- aqui solo colorea la etiqueta span -->
+        <span>Texto span</span>
+        <a href=""> Texto span mas adentro </a>
+    </p>
+
+
+    <div>
+        <p class="miestilito-class">Estilos por clase</p>
+        <!-- EL ID ES MAS FUERTE O MAYOR NIVEL QUE CLASS -->
+        <p class="miestilito-class" id="estilito-id">Estilos por clase</p>
+    </div>
+
+
+    <div>
+        <p id="aviso">Etiqueta p con id aviso</p>
+        <p>p sin id</p>
+    </div>
+
+
+
+
+</body>
+</html>

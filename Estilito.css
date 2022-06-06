@@ -1,0 +1,46 @@
+/* SELECTORES DE CSS */
+
+
+/* Tipo o etiqueta */
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* 'Georgia' */
+    color: greenyellow;
+}
+
+/* especificidad Universal (*)
+
+Aplica para todos nivel
+*{
+    margin: 0;
+    padding: 0;
+} */
+
+
+
+/* DESCENDENTE */
+/* se aplicara A TODOS LOS que esten en una etiqueta p <p> */
+p span { color: orchid;}
+
+
+/* POR ID y o ETIQUETA */
+.miestilito-class{
+    color: aqua;
+    font-family: Tahoma;
+}
+
+
+#estilito-id{
+    color: darkgreen;
+    font-family: 'cursive';
+}
+
+
+
+/* ID AVISO SE APLICARA */
+
+p#aviso{
+    color: cornflowerblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
