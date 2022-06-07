@@ -44,3 +44,16 @@ p#aviso{
     color: cornflowerblue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+div #aviso{
+    color: coral;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* aplica a un div, a un #aviso, puede ser a un h1, */
+div, #aviso{
+    background-color: black;
+
+}
+
