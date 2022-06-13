@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogo</title>
+</head>
+<body>
+    
+<button onclick="cuadrosDialogo()">!Presiona para ver cuadros de dialogo¡</button> <br> <br>
+
+<button onmouseover="cuadrosDialogo()">!Presiona para ver cuadros de dialogo¡</button> <br> <br>
+
+<button onmouseout="cuadrosDialogo()">!Presiona para ver cuadros de dialogo¡</button> <br> <br>
+
+
+
+
+</body>
+
+<script>
+    function cuadrosDialogo(){
+       // alert("Este es mi primer alert, estoy feliz :)")
+
+    //    var edad = prompt("Ingresa tu edad");
+    //    alert("Hola este es tu edad: "+edad);
+
+        var confirmacion = confirm("tas bien?");
+        if(confirmacion){
+            alert("todo bien,todo correcto...")
+
+        }else{
+            alert("Unas chelas .... ?")
+        }
+
+    }
+</script>
+</html>
