@@ -102,3 +102,21 @@ function llamarEtiqueta() {
 }
     
 }
+
+
+///HTML MODIFICACION
+
+
+function crearElementos() {
+    var elemento = document.getElementById('id-div');
+    ///se puede crear un boton dentro de otro boton
+    elemento.innerHTML ='<br> <button  onclick="modificarElemento()"  >Modificacion</button> </br>';
+
+}
+
+//onclick="modificarElemento()" este se guarda y se puede llamar en otra funcion como la de abajo
+function modificarElemento() {
+    var elemento = document.getElementById('btn1');
+    elemento.innerHTML = "Boton cambiado"
+    
+}
