@@ -120,3 +120,29 @@ function modificarElemento() {
     elemento.innerHTML = "Boton cambiado"
     
 }
+
+
+
+///HTML EVENTOS
+
+function mensajeClic() {
+    alert("Hola desde Evento Clic")
+    
+}
+
+function mensajeSobre(){
+    alert("Hola desde mensaje sobre")
+}
+
+function mensajeCarga() {
+    alert("Se recargo la pagina")
+    var elemento = document.getElementsByTagName("body")
+    elemento[0].style.backgroundColor="coral";
+
+    
+}
+
+
+
+
+
