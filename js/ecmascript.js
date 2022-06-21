@@ -1,3 +1,4 @@
+/////////////////// variables y constantes////////////////////////
 function declararVar() {
     var materia="WEB";
 
@@ -50,7 +51,115 @@ function declararObj() {
     persona.nombre= 'Mario'
     console.log(persona)
 
-    Object.freeze(persona.nombre)
+    // CONGELA LA VARIABLE PERSONA.NOMBRE PARA QUE NO MODIFIQUE SU VALOR,  CONFIGURABLE: FALSE(NO)   EDITABLE: FALSE(NO)
+    Object.defineProperty(persona, "nombre", {configurable:false, writable: false})
     persona.nombre= 'Pablo'
     console.log(persona)
 }
+
+
+
+/////////////////FUNCIONES LAMDA  REVISAR EN CONSOLE DEL NAVEGADOR////////////////
+
+
+function sumaNormal(a,b) {      
+    return (a+b);
+}
+console.log(sumaNormal(4,19));
+
+//Funcion flecha return implicito
+
+let sumaFlechaIm = (a,b)=>(a+b);
+console.log(sumaFlechaIm(10,10))
+
+//Funcion flecha return explicito
+let sumaFlechaEx = (a,b)=>{
+    return a+b
+
+}
+
+console.log(sumaFlechaEx(5,5))
+
+//Funcion Flecha con cgl interno
+let multiplicacion = (a,b)=>console.log(a*b);
+multiplicacion(4,5);
+
+
+
+//FUNCION VALORES POR DEFECTO
+let usuario = (nombre="Johann", apellido="Escobar")=>{
+    console.log("Hola mi nombre es: " +nombre+ " " +apellido);
+}
+
+usuario();
+usuario("Dominguez");
+usuario("Juan", "Perez")
+
+
+
+
+//////TEMPLATE LITERALSS///////////////////////////
+
+let dia = "Martes :(";
+let conactenado = `hoy es: ${dia}`
+console.log(conactenado);
+console.log(`Hoy es: ${dia}`)
+
+
+let musica = (nombre,artista)=>{
+    return `Hola, estoy escuchando ${nombre} de ${artista}`
+}
+console.log(musica("Amor tumbado","Starset Die for you"))
+
+
+//SIRVE PARA UN SALTO DE PAGINA(COMO UN LA ETIQUETA <BR> DE HTML)
+console.log("Primera linea \n Segunda Linea")
+
+console.log(`PRIMERA LINEA
+SEGUNDA LINEA`)
+
+
+
+//////////SPREAD  OPERATOR////////////////
+let miArreglo=[1,2,3];
+let sumarArreglo = (a,b,c) => console.log(a+b+c)
+//LOS PUNTOS RECORREN TODO EL ARREGLO COMO UN FOR IN REACH
+console.log(miArreglo)
+console.log(...miArreglo)
+
+sumarArreglo(...miArreglo)
+
+let otroArray=[10,11,12]
+//SE AGREGA OTROARRAY Y PONE LOS NUMERO ARRIBA
+let miArreglo2 = [...miArreglo,4,5,6, ...otroArray]
+console.log(...miArreglo2)
+
+
+
+//////////DESCTRUCTURACION///////////////////
+
+
+const celular = {
+    modelo:"Galaxy  Note 10+",
+    marca: "Samsumg ",
+    Precio: 10000,
+    color: "Blanco",
+
+    memoria:{
+        ram:12,
+        rom:256
+    }
+}
+
+let modelo = celular.modelo;
+console.log(`El celular ${modelo} cuesta $${celular.Precio} y tiene ${celular.memoria.ram} de ram`)
+
+
+const{marca,color,memoria:{rom}}= celular;
+console.log(`El celular ${marca} es de color ${color} y tiene ${rom}`)
+
+
+
+
+
+
