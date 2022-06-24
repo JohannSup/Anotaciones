@@ -148,18 +148,109 @@ const celular = {
     memoria:{
         ram:12,
         rom:256
+    },
+    direccion:{
+        calle:"calle",
+        colonia:"colonia",
+        numero:{
+            interior:"100",
+            exterior:"2"
+        }
     }
 }
 
-let modelo = celular.modelo;
-console.log(`El celular ${modelo} cuesta $${celular.Precio} y tiene ${celular.memoria.ram} de ram`)
+// let modelo = celular.modelo;
+// console.log(`El celular ${modelo} cuesta $${celular.Precio} y tiene ${celular.memoria.ram} de ram`)
 
 
-const{marca,color,memoria:{rom}}= celular;
-console.log(`El celular ${marca} es de color ${color} y tiene ${rom}`)
+// const{marca,color,memoria:{rom}}= celular;
+// console.log(`El celular ${marca} es de color ${color} y tiene ${rom}`)
+
+console.log(celular)
+console.log(celular.color)
+console.log(celular.memoria.ram)
+console.log(celular.direccion.numero.interior)
 
 
 
+const {color, memoria:{ram}, direccion :{numero}} = celular;
+const {interior}=celular;
+console.log(color)
+// console.log(memoria.ram)
+console.log(ram)
+
+/////////////////////// EVENT LISTENERS /////////////////////
 
 
+// // let elemento = document.getElementById("id-evento")
+// let elemento = document.querySelector("#id-evento")
+// console.log(elemento)
+
+// elemento.addEventListener("click",()=>alert("Hola desde event listeners"))
+
+
+
+///////////////// ASYNC AWAIT //////////////////////////////////////////
+
+
+const canciones = [
+    {
+        id:1,
+        nombre:"Vete ya",
+        artista:"Gallo de oro",
+        duracion:120
+    },
+    {
+        id:2,
+        nombre: "Neffex",
+        artista:"Soldier",
+        duracion:160
+        
+    },
+    {
+        id:3,
+        nombre: "Die for you",
+        artista:"Starset",
+        duracion:150
+        
+    }
+]
+
+
+const consultarCanciones = ()=>{
+    return canciones;
+}
+
+
+// const consultarCanciones = ()=>{
+//     setTimeout(()=>{
+//         return canciones;
+//     },2000)
+// }
+
+// console.log(consultarCanciones())
+
+
+
+// const consultarCanciones = ()=>{
+//     return new Promise((resolve,reject)=> {
+//         setTimeout(()=>{
+//             resolve(canciones)
+//         }, 5000);///delay para que se active son 5 segundos 1000=1segundo
+
+//     })
+// }
+
+// consultarCanciones().then((canciones)=>{
+//     console.log(canciones)
+// })
+
+
+
+async function misRolitas() { //////await es para que acabe de terminar la promesa para que lo lance
+    const listaCanciones = await consultarCanciones();
+    console.log(listaCanciones);
+}
+
+misRolitas();
 
