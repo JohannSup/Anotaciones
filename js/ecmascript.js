@@ -217,9 +217,10 @@ const canciones = [
 ]
 
 
-const consultarCanciones = ()=>{
-    return canciones;
-}
+// const consultarCanciones = ()=>{
+//     return canciones;
+// }
+
 
 
 // const consultarCanciones = ()=>{
@@ -227,6 +228,9 @@ const consultarCanciones = ()=>{
 //         return canciones;
 //     },2000)
 // }
+
+
+
 
 // console.log(consultarCanciones())
 
@@ -241,16 +245,25 @@ const consultarCanciones = ()=>{
 //     })
 // }
 
+// ////una vez hecha la promesa hay que poner un then para que imprima los valores en 5 segundos=5000
+// //la funcion consultarCanciones
 // consultarCanciones().then((canciones)=>{
 //     console.log(canciones)
 // })
 
 
 
-async function misRolitas() { //////await es para que acabe de terminar la promesa para que lo lance
-    const listaCanciones = await consultarCanciones();
-    console.log(listaCanciones);
-}
+// async function misRolitas() { //////await es para que acabe de terminar la promesa para que lo lance
+//     const listaCanciones = await consultarCanciones();
+//     console.log(listaCanciones);
+// }
 
-misRolitas();
+//misRolitas();
+
+
+
+
+
+
+
 

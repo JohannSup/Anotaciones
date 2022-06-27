@@ -7,12 +7,85 @@
     <title>Asincrono</title>
 </head>
 <body>
-    
+    <h1>TAbLA DE USUARIOS</h1>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo Electronico</th>
+            <th>Foto</th>
+        </tr>
+        <tbody id="cuerpecito"></tbody>
 
+
+
+
+
+
+    </table>
 
 
 
     
 </body>
-<script src="js/ecmascript.js"></script>
+<!-- <script src="js/ecmascript.js"></script> -->
+
+<script>
+    const obtenerUsuarios = async ()=>{
+        const servicio = "https://reqres.in/api/users?page=2"
+        try{
+            const response = await fetch(servicio,{
+                method:"GET",
+                headers:{"Content-Type":"application/json"},
+            });
+            const json = await response.json()
+            // console.log(json.data)
+            mostrarUsuarios(json)
+        }catch(error){
+            console.log(error);
+        }
+    };
+
+    obtenerUsuarios();
+
+    ///////////////////ESTO LO MOSTRARA EN LA TABLA HTML
+    function mostrarUsuarios(json){
+        let informacion = " ";
+
+        for(let r of json.data){
+            informacion += 
+            `<tr>
+
+                <td>${r.first_name}</td>
+                <td>${r.last_name}</td>
+                <td>${r.email}</td>
+                <td><image src="${r.avatar}" height=100px width=100px   /></td>
+
+            </tr>`
+        }
+        document.getElementById("cuerpecito").innerHTML = informacion;
+        
+    }
+
+
+
+   // obtenerUsuarios().then((response)=>{console.log(response)})
+
+
+ //CUALQUIERAS DE ESTAS DOS(ARRIBA Y LA DE ABAJO MOSTRARA LOS DATOS DESPUEDE DE CUPLIR LA PROMESA)
+
+//    const mostrarUsuarios= async()=>{
+//     const listaUsuarios = await obtenerUsuarios();
+//     console.log(listaUsuarios)
+//    };
+
+//    mostrarUsuarios();
+
+</script>
+
+
+
+
+
+
 </html>
