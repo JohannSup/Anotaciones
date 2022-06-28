@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica-alert</title>
+
+    <link rel="stylesheet" type="text/css" href="css/Practica-Alert.css">
+
+</head>
+    
+    <body   >
+        <center >
+            <div style="background-color:#079DF3; color: aliceblue;" id="id-div; "  class="box">
+                <h1>Datos Personales</h1>
+
+                <div style="background-color: #81C6ED ;" class="categoriaDiv" class="box" >
+                    <table class="box">
+                        <tbody>
+                            <tr>
+                                <td><p style="color: black;">Nombre completo:</p></td>
+                                <td><p style="color: white;" id="nombre">AQUI EL TEXTO A MOSTRAR</p></td>
+                            </tr>
+                            <tr>
+                                <td><p style="color: black;">telefono</p></td>
+                                <td><p style="color: white;" id="telefono">AQUI EL TEXTO A MOSTRAR</p></td>
+                            </tr>
+                            <tr>
+                                <td><p style="color: black;">Correo Electronico</p></td>
+                                <td><p style="color: white; " id="correo">AQUI EL TEXTO A MOSTRAR</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    
+                    
+                    
+                   
+                    </div>
+                    <div style="background-color:#079DF3;" class="box">
+                    <br>
+                    <br>
+                    <br>
+
+
+
+
+                </div>
+
+                
+
+
+
+            </div>
+
+            
+
+            
+
+        </center>
+        
+    
+    
+    
+    
+    
+    
+    
+    </body>
+
+
+    
+    <script>
+       let nombre = prompt("Ingresa tu Nombre Completo");
+        let telefono = prompt("Dame tu numero celular") ;
+        let  correo = prompt("Ingresa tu correo Electronico")
+
+
+        var elemento = document.getElementById('nombre')
+        elemento.innerHTML= '<td><p style="color: white;" id="nombre">'+nombre+'</p></td>';
+
+        var elemento = document.getElementById('telefono')
+        elemento.innerHTML= '<td><p style="color: white;" id="telefono">'+telefono+'</p></td>';
+
+        var elemento = document.getElementById('correo')
+        elemento.innerHTML= '<td><p style="color: white;" id="correo">'+correo+'</p></td>';
+
+
+    </script> 
+
+
+
+</html>

@@ -1,3 +1,7 @@
+
+///Dialogo////////////
+
+
 ARCHIVO 
 function HolaMundo(){
     alert("Hola desde funciones.js")
