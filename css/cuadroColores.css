@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.first-row, .second-row{
+    display: flex;
+}
+
+.first-row {
+    margin-bottom: 10px;
+}
+
+.box{
+    margin-left: 50px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+
+}
+
+.green{
+    background-color: green;
+}
+
+.white{
+    background-color: white;
+}
