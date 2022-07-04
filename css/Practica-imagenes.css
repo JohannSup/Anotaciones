@@ -1,11 +1,13 @@
 
+#imagen {
+    width: 50%;
+    height: 400px;
+    background-size: cover;
+}
+
 button{
-    margin: 13px 100px 100px 100px;
-  }
-  
-
-
-
+  width: 300 ,150, 150 ,150;
+}
 
 
 
